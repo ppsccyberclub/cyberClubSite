@@ -1,0 +1,195 @@
+/* Center dialog on desktop background */
+body.xp-desktop {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #002855; /* Fallback color while image loads */
+  font-family: "Tahoma", sans-serif;
+  font-size: 11px;
+}
+
+/* Dialog Container */
+.xp-window {
+  width: 410px;
+  background: #ECE9D8;
+  border: 3px solid #0055EA;
+  border-top: none;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.45);
+  user-select: none;
+}
+
+/* Luna Title Bar */
+.xp-titlebar {
+  background: linear-gradient(
+    to bottom,
+    #0058ee 0%,
+    #3593ff 4%,
+    #288eff 18%,
+    #0055eb 35%,
+    #005bfe 70%,
+    #0037a6 100%
+  );
+  height: 28px;
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px 0 8px;
+}
+
+.xp-title {
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #0F1089;
+  letter-spacing: 0.3px;
+}
+
+/* Static Close Button */
+.xp-close-btn {
+  width: 21px;
+  height: 21px;
+  background: linear-gradient(to bottom, #F28A77 0%, #D83D23 45%, #B61C00 50%, #D83D23 100%);
+  border: 1px solid #FFFFFF;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.4);
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dialog Body */
+.xp-body {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Banner */
+.xp-banner {
+  border-bottom: 1px solid #D0CCBE;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.xp-banner-title span {
+  display: block;
+  font-size: 10px;
+  color: #444;
+}
+
+.xp-banner-title strong {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.xp-banner-title strong span {
+  color: #D34B00;
+  font-weight: 900;
+  font-style: italic;
+  margin-left: 2px;
+}
+
+.xp-banner-sub {
+  font-size: 11px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Form Layout */
+.xp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.xp-form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.xp-form-row label {
+  color: #000;
+  width: 90px;
+}
+
+/* Static Readonly Inputs */
+.xp-input {
+  flex: 1;
+  height: 21px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 2px 6px;
+  background: #FFFFFF;
+  border: 1px solid #7F9DB9;
+  border-radius: 0;
+  outline: none;
+  cursor: default;
+}
+
+/* XP Buttons & Links */
+.xp-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.xp-btn {
+  min-width: 72px;
+  height: 21px;
+  padding: 0 8px;
+  font-family: inherit;
+  font-size: inherit;
+  color: #000000;
+  text-decoration: none;
+  background: linear-gradient(to bottom, #FFFFFF 0%, #ECE9D8 15%, #D4D0C8 85%, #B5B0A2 100%);
+  border: 1px solid #003C74;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.xp-btn.default {
+  border: 1px solid #0055EA;
+  box-shadow: 0 0 0 1px #418CF0, inset 0 1px 0 #FFFFFF;
+  font-weight: bold;
+}
+
+.xp-btn:hover {
+  background: linear-gradient(to bottom, #FFFFFF 0%, #FFF4D8 15%, #FEE189 85%, #D4B068 100%);
+}
+
+.xp-btn:active {
+  background: linear-gradient(to bottom, #BAB5A8 0%, #D4D0C8 100%);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.xp-btn.disabled {
+  color: #888888;
+  cursor: default;
+  background: #ECE9D8;
+  border-color: #A0A0A0;
+  box-shadow: none;
+}
+
+.retro-banner-title strong span {
+  color: #9E1B32; /* PPSC-style red accent */
+  font-style: italic;
+  margin-left: 2px;
+}

@@ -14,7 +14,7 @@ body.xp-desktop {
 .xp-window {
   width: 410px;
   background: #ECE9D8;
-  border: 3px solid #0055EA;
+  border: 3px solid #558728;
   border-top: none;
   border-radius: 8px 8px 0 0;
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.45);
@@ -25,12 +25,12 @@ body.xp-desktop {
 .xp-titlebar {
   background: linear-gradient(
     to bottom,
-    #0058ee 0%,
-    #3593ff 4%,
-    #288eff 18%,
-    #0055eb 35%,
-    #005bfe 70%,
-    #0037a6 100%
+  #93cc5c 0%,   /* Bright top specular reflection */
+    #7ab842 12%,  /* Your base color */
+    #6ca837 35%,  /* Mid-tone shelf */
+    #5f992e 60%,  /* Body green */
+    #4a7a21 85%,  /* Lower curve shadow */
+    #3b6318 100%  /* Bottom edge depth */
   );
   height: 28px;
   border-radius: 6px 6px 0 0;
@@ -43,7 +43,7 @@ body.xp-desktop {
 .xp-title {
   color: #FFFFFF;
   font-weight: bold;
-  text-shadow: 1px 1px 1px #0F1089;
+  text-shadow: 1px 1px 1px #284410;
   letter-spacing: 0.3px;
 }
 
@@ -93,7 +93,7 @@ body.xp-desktop {
 }
 
 .xp-banner-title strong span {
-  color: #D34B00;
+  color: #558728;
   font-weight: 900;
   font-style: italic;
   margin-left: 2px;
@@ -138,6 +138,10 @@ body.xp-desktop {
   cursor: default;
 }
 
+.xp-input:focus {
+    border-color: #7AB842;
+}
+
 /* XP Buttons & Links */
 .xp-actions {
   display: flex;
@@ -166,13 +170,13 @@ body.xp-desktop {
 }
 
 .xp-btn.default {
-  border: 1px solid #0055EA;
-  box-shadow: 0 0 0 1px #418CF0, inset 0 1px 0 #FFFFFF;
+  border: 1px solid #4A7A21;
+  box-shadow: 0 0 0 1px #8FD053, inset 0 1px 0 #FFFFFF;
   font-weight: bold;
 }
 
 .xp-btn:hover {
-  background: linear-gradient(to bottom, #FFFFFF 0%, #FFF4D8 15%, #FEE189 85%, #D4B068 100%);
+  background: linear-gradient(to bottom, #FFFFFF 0%, #F3F9EE 15%, #D9EFC3 85%, #B2D98D 100%);
 }
 
 .xp-btn:active {
@@ -189,7 +193,7 @@ body.xp-desktop {
 }
 
 .retro-banner-title strong span {
-  color: #9E1B32; /* PPSC-style red accent */
+  color: #558728; /* PPSC-style red accent */
   font-style: italic;
   margin-left: 2px;
 }

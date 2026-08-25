@@ -1,0 +1,17 @@
+{
+  "name": "cyberclub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @awesome.me/buildawesome",
+    "start": "npx @awesome.me/buildawesome --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@awesome.me/buildawesome": "^4.0.0-alpha.10"
+  }
+}

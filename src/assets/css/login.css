@@ -5,8 +5,8 @@
     --white: #fff; /* White */
     --text-color: #202020; /* Off-black, for Text on White Backgrounds */
     --link-color: #038dcf; /* Medium Blue, use for links */
-    --main-font: 'JetBrains Mono', monospace; /* Main Font */
-    --accent-font: 'Inter', sans-serif; /* Accent Font */
+    --accent-font: 'JetBrains Mono', monospace; /* Main Font */
+    --main-font: 'Inter', sans-serif; /* Accent Font */
     --font-size: 1rem; /* Font Size Min 16px = 1rem */
 }
 
@@ -15,7 +15,7 @@ body {
   margin: 0;
   height: 100vh;
   background-color: var(--bgcolor); /* PPSC Navy Blue */
-  font-family: var(--main-font); /* JetBrains Mono */
+  font-family: var(--accent-font); /* JetBrains Mono */
   font-size: var(--font-size); /* 16px = 1rem */
 }
 
@@ -26,49 +26,47 @@ body {
   margin-top: 3.125rem; /* Puts this section 50 pixels from the top of the page so we can move the logo down a bit */
 }
 
-.cyber-logo img {
-  width: 15%; /* since our logo image is gigantic, this makes it show up at 15% of its original width */
-  height: 15%; /* since our logo image is gigantic, this makes it show up at 15% of its original height */
-}
-
 /* Login Form */
 .the-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px; /* This makes our "form" sit 20px below the logo! */
+  margin-top: 1.25rem; /* This makes our "form" sit 20px below the logo! */
   width: 100%;
 }
 
 .login {
   text-align: left;
-  color: #fff;
-  font-size: 1rem;
+  color: var(--white);
+  font-size: var(--font-size);
 }
 
 .login input {
-  width: 200px;
-  height: 30px;
-  border-radius: 5px;
-  border: 2px solid #0dc7bc;
-  font-family: 'JetBrains Mono', monospace;
+  width: 12.5rem;
+  height: 1.875rem;
+  border-radius: 0.313rem;
+  border: 0.125rem solid var(--accent);
+  font-family: var(--accent-font);
+  margin-bottom: 0.313rem;
+  padding-left: 0.313rem;
 }
 
 .enter {
-  margin-top: 10px;
-  width: 100px;
-  height: 30px;
+  margin-top: 0.625rem;
+  width: 6.25rem;
+  height: 1.875rem;
   text-align: center;
-  border: 2px solid #0dc7bc;
-  border-radius: 5px;
-  background-color: #002855;
-  color: #fff;
+  border: 0.125rem solid var(--accent);
+  border-radius: 0.313rem;
+  background-color: var(--bgcolor);
+  color: var(--white);
   display: block;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--accent-font);
+  cursor: pointer;
 }
 
-.login a {
+.the-form a {
   text-decoration: none;
 }

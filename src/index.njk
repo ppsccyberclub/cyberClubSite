@@ -3,7 +3,7 @@ layout: login.njk
 title: PPSC Cyber Club - Portal Access
 ---
 <section class="cyber-logo">
-  <img src="/assets/images/cyberlogo.png">
+  <img src="/assets/images/cyberlogo2.png">
 </section>
 <section class="the-form">
 <form class="login">
@@ -12,5 +12,21 @@ title: PPSC Cyber Club - Portal Access
 <label for="pass" class="pass">Password:</label><br>
 <input type="text" aria-label="password" name="password" value="*****************" disabled><br>
 </form>
-<a href="/main/index.html"><button class="enter">Enter Site</button></a>
+<button id="enter-btn" class="enter">Enter Site</button>
+<script>
+  const enterBtn = document.getElementById('enter-btn');
+  const clickSound = new Audio('/assets/sounds/mouseclick.mp3');
+  clickSound.preload = 'auto';
+  enterBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    clickSound.currentTime = 0;
+    clickSound.play();
+    clickSound.addEventListener('ended', () => {
+      window.location.href = '/main/index.html';
+    });
+    setTimeout(() => {
+      window.location.href = '/main/index.html';
+    }, 300);
+  });
+  </script>
 </section>

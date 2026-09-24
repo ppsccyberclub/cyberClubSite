@@ -5,8 +5,8 @@
     --white: #fff; /* White */
     --text-color: #202020; /* Super Dark Gray for Text on White Backgrounds */
     --link-color: #038dcf; /* Medium Blue, use for links */
-    --main-font: 'JetBrains Mono', monospace; /* Main Font */
-    --accent-font: 'Inter', sans-serif; /* Accent Font */
+    --accent-font: 'JetBrains Mono', monospace; /* Main Font */
+    --main-font: 'Inter', sans-serif; /* Accent Font */
     --font-size: 1rem; /* Font Size Min 16px = 1rem */
 }
 
@@ -22,19 +22,18 @@ body {
 
 /* Site Wrapper Styles */
 .site-wrap {
-    background-color: var(--white);
     width: 90%;
     margin: auto;
     margin-top: 1.25rem;
-    border-radius: 1.5rem;
     padding-bottom: 1.5rem;
 }
 
 /* Header & Logo Styles */
 .top {
     width: 100%;
-    border-bottom: 0.625rem solid var(--bgcolor);
     display: flow-root;
+    background-color: var(--white);
+    border-radius: 1.5rem;
 }
 
 header {
@@ -77,9 +76,11 @@ nav ul {
 /* Main Section Styles */
 .main {
     clear: both;
-    margin-top: 1.875rem;
-    padding-left: 0.625rem;
     display: flex;
+    margin-top: 0.625rem;
+    justify-content: space-evenly;
+    gap: 0.7%;
+    font-family: var(--main-font);
 }
 
 /* Sidebar Styles */
@@ -88,12 +89,42 @@ nav ul {
     font-size: 0.75rem;
 }
 
-.sidebar li {
-    margin-bottom: 0.625rem;
-    list-style-type: none;
+.widget {
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    padding: 0.313rem 0 0.313rem 0;
 }
 
 .widget-title {
     font-size: 1.25rem;
     text-align: center;
+    font-family: var(--accent-font);
+}
+
+.widget li {
+    margin-bottom: 0.625rem;
+    list-style-type: none;
+}
+
+/* Calendar Specific Styles */
+.event-time {
+    font-weight: 700;
+}
+
+.event-name {
+    margin-top: 0.125rem;
+    font-weight: 600;
+}
+
+.event-description {
+    font-style: italic;
+}
+
+/* Main Page Styles  - for main.njk */
+.main-page {
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    height: 100vh;
+    width: 75%;
+    padding: 0.625rem;
 }

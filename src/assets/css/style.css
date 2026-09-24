@@ -1,0 +1,93 @@
+/* Site Variables for CSS - use like so:  background-color: var(--bgcolor); */
+:root {
+    --bgcolor: #002855; /* PPSC Navy Blue */
+    --accent: #0dc7bc; /* PPSC Cyber Club Ice Blue */
+    --white: #fff; /* White */
+    --text-color: #202020; /* Super Dark Gray for Text on White Backgrounds */
+    --link-color: #038dcf; /* Medium Blue, use for links */
+    --main-font: 'JetBrains Mono', monospace; /* Main Font */
+    --accent-font: 'Inter', sans-serif; /* Accent Font */
+    --font-size: 1rem; /* Font Size Min 16px = 1rem */
+}
+
+/* Body Styles */
+body {
+    background-color: var(--bgcolor);
+    font-family: var(--main-font);
+    font-size: var(--font-size);
+    color: var(--text-color);
+    margin: 0;
+    height: 100vh; /* This will help keep that pesky footer at the bottom where it belongs! */
+}
+
+/* Site Wrapper Styles */
+.site-wrap {
+    background-color: var(--white);
+    width: 90%;
+    margin: auto;
+    margin-top: 1.25rem;
+    border-radius: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Header & Logo Styles */
+.top {
+    width: 100%;
+    border-bottom: 0.625rem solid var(--bgcolor);
+    display: flow-root;
+}
+
+header {
+    width: 5%;
+    height: 6rem;
+    float: left;
+    padding: 0.625rem;
+}
+
+.logo {
+    height: 6rem;
+    width: auto;
+    padding-left: 1.25rem;
+}
+
+/* Navigation Styles */
+nav {
+    float: right;
+    width: 90%;
+    height: 6rem;
+    padding: 0.625rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-link {
+    padding: 0.625rem;
+}
+
+.nav-link a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Main Section Styles */
+.main {
+    clear: both;
+    margin-top: 1.875rem;
+    padding-left: 0.625rem;
+    display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 25%;
+    font-size: 0.75rem;
+}
+
+.sidebar li {
+    margin-bottom: 0.313rem;
+}

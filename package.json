@@ -13,5 +13,8 @@
   "type": "module",
   "devDependencies": {
     "@awesome.me/buildawesome": "^4.0.0-alpha.10"
+  },
+  "dependencies": {
+    "node-ical": "^0.27.2"
   }
 }

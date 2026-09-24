@@ -6,8 +6,8 @@
         <li class="event-card">
           <time class="event-time">{{ event.formattedDate }} • {{ event.formattedTime }}</time>
           <h4 class="event-name">{{ event.title }}</h4>
-          {% if event.location %}
-            <span class="event-location">{{ event.location }}</span>
+          {% if event.description %}
+            <span class="event-description">{{ event.description }}</span>
           {% endif %}
         </li>
       {% endfor %}

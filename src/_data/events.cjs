@@ -18,7 +18,7 @@ module.exports = async function() {
         return {
           title: event.summary || 'Club Meeting',
           date: start,
-          location: event.location || '',
+          description: event.description ? event.description.trim() : '',
           formattedDate: start.toLocaleDateString('en-US', {
             weekday: 'short',
             month: 'short',

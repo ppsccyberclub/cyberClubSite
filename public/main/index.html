@@ -27,12 +27,35 @@
         </div>
             <section class="main">
                 <aside class="sidebar">
-                    {% include "_partials/calendar.njk" %} <!-- Adds the calendar widget to the site -->
-                    {% include "_partials/officers.njk" %} <!-- Adds the current officers widget to the site > edit _includes/_partials/officers.njk to change them -->
+                      <section class="widget">
+  <h3 class="widget-title">Upcoming Events</h3>
+  
+  
+    <ul class="event-stack">
+      
+        <li class="event-card">
+          <time class="event-time">Wed, Oct 7 • 5:00 PM</time>
+          <h4 class="event-name">Cyber Club Meeting in The Grove</h4>
+          
+            <span class="event-description"><strong>Notes:</strong> Bring your laptops, we&#39;ll be working on more CTF tools!</span>
+          
+        </li>
+      
+        <li class="event-card">
+          <time class="event-time">Wed, Oct 21 • 5:00 PM</time>
+          <h4 class="event-name">Cyber Club Meeting in The Grove</h4>
+          
+        </li>
+      
+    </ul>
+  
+  </section>
+
                 </aside>
-    {{ content | safe }}
+    <article class="main-page">
+    Hello! We are the Pikes Peak Cyber Club!
+</article>
             </section>
-            <footer>&copy; {{ currentYear.year }} <!-- This script allows the copyright date to always point to the current year! --> | Pikes Peak State College Cyber Club</footer>
         </div>
     </body>
     </html>

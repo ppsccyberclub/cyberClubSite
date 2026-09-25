@@ -26,10 +26,12 @@
         </div>
             <section class="main">
                 <aside class="sidebar">
-                    {% include "_partials/calendar.njk" %}
+                    {% include "_partials/calendar.njk" %} <!-- Adds the calendar widget to the site -->
+                    {% include "_partials/officers.njk" %} <!-- Adds the current officers widget to the site > edit _includes/_partials/officers.njk to change them -->
                 </aside>
     {{ content | safe }}
             </section>
+            <footer>&copy; {{ currentYear.year }} <!-- This script allows the copyright date to always point to the current year! --> | Pikes Peak State College Cyber Club</footer>
         </div>
     </body>
     </html>

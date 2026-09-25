@@ -1,0 +1,131 @@
+/* Site Variables for CSS - use like so:  background-color: var(--bgcolor); */
+:root {
+    --bgcolor: #002855; /* PPSC Navy Blue */
+    --accent: #0dc7bc; /* PPSC Cyber Club Ice Blue */
+    --white: #fff; /* White */
+    --text-color: #202020; /* Super Dark Gray for Text on White Backgrounds */
+    --link-color: #038dcf; /* Medium Blue, use for links */
+    --accent-font: 'JetBrains Mono', monospace; /* Main Font */
+    --main-font: 'Inter', sans-serif; /* Accent Font */
+    --font-size: 1rem; /* Font Size Min 16px = 1rem */
+}
+
+/* Body Styles */
+body {
+    background-color: var(--bgcolor);
+    font-family: var(--main-font);
+    font-size: var(--font-size);
+    color: var(--text-color);
+    margin: 0;
+    height: 100vh; /* This will help keep that pesky footer at the bottom where it belongs! */
+}
+
+/* Site Wrapper Styles */
+.site-wrap {
+    width: 80%;
+    margin: auto;
+    margin-top: 1.25rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Header & Logo Styles */
+.top {
+    width: 100%;
+    display: flow-root;
+    background-color: var(--white);
+    border-radius: 1.5rem;
+}
+
+header {
+    width: 5%;
+    height: 6rem;
+    float: left;
+    padding: 0.625rem;
+}
+
+.logo {
+    height: 6rem;
+    width: auto;
+    padding-left: 1.25rem;
+}
+
+/* Navigation Styles */
+nav {
+    float: right;
+    width: 90%;
+    height: 6rem;
+    padding: 0.625rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    font-family: var(--accent-font);
+}
+
+.nav-link {
+    padding: 0.625rem;
+}
+
+.nav-link a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    /*text-transform: uppercase;*/
+}
+
+/* Main Section Styles */
+.main {
+    clear: both;
+    display: flex;
+    margin-top: 0.625rem;
+    justify-content: space-evenly;
+    gap: 0.7%;
+    font-family: var(--main-font);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 25%;
+    font-size: 0.75rem;
+}
+
+.widget {
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    padding: 0.313rem 0 0.313rem 0;
+}
+
+.widget-title {
+    font-size: 1.25rem;
+    text-align: center;
+    font-family: var(--accent-font);
+}
+
+.widget li {
+    margin-bottom: 0.625rem;
+    list-style-type: none;
+}
+
+/* Calendar Specific Styles */
+.event-time {
+    font-weight: 700;
+}
+
+.event-name {
+    margin-top: 0.125rem;
+    font-weight: 600;
+}
+
+.event-description {
+    font-style: italic;
+}
+
+/* Main Page Styles  - for main.njk */
+.main-page {
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    height: 100vh;
+    width: 75%;
+    padding: 0.625rem;
+}

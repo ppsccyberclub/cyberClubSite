@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv=""X-UA-Compatible" content="IE=edge">
+        <title>PPSC Cyber Club</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">   
+        <link href="/assets/css/login.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/7ee24494c8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <section class="cyber-logo">
+  <img src="/assets/images/cyberlogo2.png">
+</section>
+<section class="the-form">
+<section class="fake-form">
+<form class="login">
+<label for="user" class="user">Username:</label><br>
+<input type="text" aria-label="username" name="username" value="Guest" disabled><br>
+<label for="pass" class="pass">Password:</label><br>
+<input type="text" aria-label="password" name="password" value="*****************" disabled><br>
+</form>
+</section>
+<section class="enter-site">
+<div id="enter-btn" class="enter"><i class="fa-solid fa-arrow-right"></i></div>
+<script>
+  const enterBtn = document.getElementById('enter-btn');
+  const clickSound = new Audio('/assets/sounds/mouseclick.mp3');
+  clickSound.preload = 'auto';
+  enterBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    clickSound.currentTime = 0;
+    clickSound.play();
+    clickSound.addEventListener('ended', () => {
+      window.location.href = '/main/index.html';
+    });
+    setTimeout(() => {
+      window.location.href = '/main/index.html';
+    }, 300);
+  });
+  </script>
+  </section>
+</section>
+    </body>
+    </html>

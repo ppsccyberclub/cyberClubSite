@@ -22,7 +22,7 @@ body {
 
 /* Site Wrapper Styles */
 .site-wrap {
-    width: 90%;
+    width: 80%;
     margin: auto;
     margin-top: 1.25rem;
     padding-bottom: 1.5rem;
@@ -61,6 +61,7 @@ nav ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    font-family: var(--accent-font);
 }
 
 .nav-link {
@@ -70,7 +71,7 @@ nav ul {
 .nav-link a {
     text-decoration: none;
     font-size: 1.5rem;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 
 /* Main Section Styles */

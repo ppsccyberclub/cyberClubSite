@@ -6,13 +6,16 @@ title: PPSC Cyber Club - Portal Access
   <img src="/assets/images/cyberlogo2.png">
 </section>
 <section class="the-form">
+<section class="fake-form">
 <form class="login">
 <label for="user" class="user">Username:</label><br>
 <input type="text" aria-label="username" name="username" value="Guest" disabled><br>
 <label for="pass" class="pass">Password:</label><br>
 <input type="text" aria-label="password" name="password" value="*****************" disabled><br>
 </form>
-<button id="enter-btn" class="enter">Enter Site</button>
+</section>
+<section class="enter-site">
+<div id="enter-btn" class="enter"><i class="fa-solid fa-arrow-right"></i></div>
 <script>
   const enterBtn = document.getElementById('enter-btn');
   const clickSound = new Audio('/assets/sounds/mouseclick.mp3');
@@ -29,4 +32,5 @@ title: PPSC Cyber Club - Portal Access
     }, 300);
   });
   </script>
+  </section>
 </section>

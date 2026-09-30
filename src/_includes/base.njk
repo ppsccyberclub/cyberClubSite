@@ -30,7 +30,9 @@
                     {% include "_partials/clubEvents.njk" %} <!-- Adds the calendar widget to the site -->
                     {% include "_partials/officers.njk" %} <!-- Adds the current officers widget to the site > edit _includes/_partials/officers.njk to change them -->
                 </aside>
+                <article class="main-page">
     {{ content | safe }}
+                </article>
             </section>
             <footer>&copy; {{ currentYear.year }} <!-- This script allows the copyright date to always point to the current year! --> | Pikes Peak State College Cyber Club</footer>
         </div>

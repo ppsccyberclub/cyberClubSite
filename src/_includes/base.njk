@@ -4,12 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv=""X-UA-Compatible" content="IE=edge">
-        <title>PPSC Cyber Club</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">  
+        <title>Pikes Peak State College Cyber Club</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- fonts by Google! -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- fonts by Google! -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">  <!-- fonts by Google! -->
         <link href="/assets/css/style.css" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/203c33e277.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/203c33e277.js" crossorigin="anonymous"></script> <!-- a way to get icons from various places -->
     </head>
     <body>
         <div class="site-wrap">
@@ -27,8 +27,8 @@
         </div>
             <section class="main">
                 <aside class="sidebar">
-                    {% include "_partials/clubEvents.njk" %} <!-- Adds the calendar widget to the site -->
-                    {% include "_partials/officers.njk" %} <!-- Adds the current officers widget to the site > edit _includes/_partials/officers.njk to change them -->
+                    {% include "_partials/calendar.md" %} <!-- Adds the calendar widget to the site - it uses Google Calendar and pulls from the public ics URL -->
+                    {% include "_partials/officers.md" %} <!-- Adds the current officers widget to the site > edit src/_data/officers.js to change them -->
                 </aside>
                 <article class="main-page">
     {{ content | safe }}

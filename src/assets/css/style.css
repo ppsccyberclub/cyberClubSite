@@ -1,11 +1,13 @@
 /* Site Variables for CSS - use like so:  background-color: var(--bgcolor); */
 /* If you want to change the colors - just change the hex values #002855 to #000000 for example, then change PPSC Navy Blue to the color name for future reference */
 :root {
-    --bgcolor: #002855; /* PPSC Navy Blue */
-    --accent: #0dc7bc; /* PPSC Cyber Club Ice Blue */
+    --bgcolor: #051827; /* Deep Navy */
+    --accent: #00Bfc8; /* Cyber Cyan, mostly for borders */
+    --gradient-top: #11446b; /* Gradient Top Color */
+    --gradient-bottom: #030d17; /* Gradient Bottom Color */
     --white: #fff; /* White */
-    --text-color: #202020; /* Super Dark Gray for Text on White Backgrounds */
-    --link-color: #038dcf; /* Medium Blue, use for links */
+    --text-color: #202020; /* Off-black, for Text on White Backgrounds */
+    --link-color: #005B8C; /* Deep Ridge Blue, use for links */
     --accent-font: 'JetBrains Mono', monospace; /* Main Font */
     --main-font: 'Inter', sans-serif; /* Accent Font */
     --font-size: 1rem; /* Font Size Min 16px = 1rem */
@@ -14,7 +16,7 @@
 /* Body Styles */
 body {
     background-color: var(--bgcolor);
-    background-image: linear-gradient(var(--bgcolor), var(--link-color)); /* This gives the background a cool gradient effect using colors - yes, it uses an image property, don't ask me, I don't know, I just work here... it works, so unless you don't want it anymore, leave it alone.*/
+    background-image: linear-gradient(var(--gradient-top), var(--gradient-bottom)); /* This gives the background a cool gradient effect using colors - yes, it uses an image property, don't ask me, I don't know, I just work here... it works, so unless you don't want it anymore, leave it alone.*/
     background-attachment: fixed;
     font-family: var(--main-font);
     font-size: var(--font-size);
@@ -74,7 +76,8 @@ nav ul {
 .nav-link a {
     text-decoration: none;
     font-size: 1.5rem;
-    /*text-transform: uppercase;*/
+    color: var(--link-color);
+    text-transform: uppercase;
 }
 
 /* Main Section Styles */
@@ -132,6 +135,10 @@ nav ul {
     height: 100vh;
     width: 75%;
     padding: 0.625rem;
+}
+
+.main-page h1 {
+    text-align: center;
 }
 
 /* Footer Styles */

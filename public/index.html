@@ -13,10 +13,10 @@
     </head>
     <body>
     <section class="cyber-logo">
-  <img src="/assets/images/cyberlogo2.png">
+  <img src="/assets/images/cyberlogo2.png" alt="Pikes Peak State College Cyber Club">
 </section>
 <section class="the-form">
-<section class="fake-form">
+<section class="fake-form" aria-hidden="true">
 <form class="login">
 <label for="user" class="user">Username:</label><br>
 <input type="text" aria-label="username" name="username" value="Guest" disabled><br>
@@ -25,22 +25,49 @@
 </form>
 </section>
 <section class="enter-site">
-<div id="enter-btn" class="enter"><i class="fa-solid fa-arrow-right"></i></div>
+<div aria-label="Enter the Site" id="enterBtn" class="enter" role="button" tabindex="0"><i class="fa-solid fa-arrow-right"></i></div>
 <script>
-  const enterBtn = document.getElementById('enter-btn');
-  const clickSound = new Audio('/assets/sounds/mouseclick.mp3');
-  clickSound.preload = 'auto';
-  enterBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    clickSound.currentTime = 0;
-    clickSound.play();
-    clickSound.addEventListener('ended', () => {
-      window.location.href = '/main/index.html';
-    });
-    setTimeout(() => {
-      window.location.href = '/main/index.html';
-    }, 300);
+const btn = document.getElementById('enterBtn');
+const clickSfx = new Audio('/assets/sounds/mouseclick.mp3');
+clickSfx.preload = 'auto';
+
+let isNavigating = false;
+
+function triggerEnter() {
+  if (isNavigating) return;
+  isNavigating = true;
+
+  const destination = '/main.html';
+
+  clickSfx.currentTime = 0;
+
+  // Navigate when the sound finishes
+  clickSfx.onended = () => {
+    window.location.assign(destination);
+  };
+
+  // Play audio
+  clickSfx.play().catch(() => {
+    // If audio fails or is blocked, navigate anyway
+    window.location.assign(destination);
   });
+
+  // Safety net in case onended doesn't fire
+  setTimeout(() => {
+    window.location.assign(destination);
+  }, 350);
+}
+
+// Mouse click
+btn.addEventListener('click', triggerEnter);
+
+// Keyboard support (Enter and Space)
+btn.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault(); // Stop spacebar from scrolling the page
+    triggerEnter();
+  }
+});
   </script>
   </section>
 </section>
